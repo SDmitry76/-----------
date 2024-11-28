@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Кредитный калькулятор</title>
+</head>
+<body>
+    <script>
+    let userAge = prompt ("Введите ваш год рождения!");
+        userAge = parseInt(userAge);
+        let currentYear = new Date().getFullYear();
+
+        let age = currentYear - userAge;
+        console.log(age)
+         
+        if (age <= 17) {
+            alert("Вам кредит не нужен. Всего доброго!")
+        }  else if (age >= 18 && age <= 21) { 
+            getSum (50000)
+        } 
+          else if (age >= 22 && age <= 35) { 
+            getSum (400000)
+        }  else if (age >= 35 && age <= 65) {
+            getSum (1000000)
+        }  else {
+                alert("Вам кредит не нужен. Всего доброго!");
+        } 
+        function getSum(maxCredit){
+            const needSum = prompt(`Мы можем Вам выдать максимум ${maxCredit}.\n Введите сумму кратную 1000.`);
+            if(maxCredit % 1000 !==0){alert (`Вы внесли значение не кратное 1000. Мы можем выдать от 1000 до ${maxCredit}`);
+            } else {alert (`Видимо Вам кредит не нужен. Всего доброго!`);}
+        }
+    
+     </script>   
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Запрашиваем число у пользователя
+        let number = prompt("Введите любое число:");
+    
+        // Преобразуем строку в число
+        number = parseFloat(number); // Можно использовать parseInt() для целых чисел
+    
+        // Проверяем корректность ввода
+        if (isNaN(number)) {
+            alert("Пожалуйста, введите корректное число.");
+        } else {
+            // Вычисляем квадрат и куб числа
+            let square = number * number;
+            let cube = number * number * number;
+    
+            // Выводим результаты
+            alert("Число: " + number + "\n" +
+                  "Квадрат: " + square + "\n" +
+                  "Куб: " + cube);
+        }
+    </script> 
+</body>
+</html>
