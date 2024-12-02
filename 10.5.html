@@ -29,8 +29,9 @@
         } 
         function getSum(maxCredit){
             const needSum = prompt(`Мы можем Вам выдать максимум ${maxCredit}.\n Введите сумму кратную 1000.`);
-            if(maxCredit % 1000 !==0){alert (`Вы внесли значение не кратное 1000. Мы можем выдать от 1000 до ${maxCredit}`);
-            } else {alert (`Видимо Вам кредит не нужен. Всего доброго!`);}
+            let parsedSum = parseInt(needSum);
+            if (isNaN(parsedSum) || parsedSum % 1000 !== 0 || parsedSum < 1000 || parsedSum > maxCredit){alert (`Вы внесли значение не кратное 1000. Мы можем выдать от 1000 до ${maxCredit}`);
+            } else {alert (`Вам одобрен кредит на ${needSum}`);}
         }
     
      </script>   

@@ -6,22 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <script>// Получаем имя пользователя
+    <script>
         let userName = prompt("Введите ваше имя");
-        // Получаем год рождения пользователя
         let birthYear = prompt("Введите год рождения");
         alert("Год должен быть числом!");
-
-        // Преобразуем год рождения в число
         birthYear = parseInt(birthYear);
-
-        // Получаем текущий год
         let currentYear = new Date().getFullYear();
-
-        // Вычисляем возраст
         let age = currentYear - birthYear;
-
-        // Выводим результат
         alert(`${userName}: ${age}`);
         </script>
 </body>

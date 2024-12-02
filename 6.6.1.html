@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка палиндрома</title>
+</head>
+<body>
+    <script>
+        let word = prompt("Введите слово для проверки на палиндром:");
+
+        function isPalindrome(str) {
+            str = str.replace(/\s+/g,``).toLowerCase();
+            let reversedStr = str.split(``).reverse().join(``);
+            return str === reversedStr;
+        }
+
+         if (isPalindrome(word)) {
+            console.log(`Слово "${word}" является палиндромом.`);
+        } else {
+            console.log(`Слово "${word}" не является палиндромом.`);
+        }
+    </script>
+</body>
+</html>

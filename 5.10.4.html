@@ -18,7 +18,6 @@
 
         let ending;
 
-        // Определяем окончание в зависимости от остатка от деления
         if (age % 10 === 1 && age % 100 !== 11) {
             ending = "год";
         } else if (age % 10 >= 2 && age % 10 <= 4 && (age % 100 < 10 || age % 100 >= 20)) {
@@ -27,8 +26,7 @@
             ending = "лет";
         }
 
-        // Выводим результат
-        alert(`${userName}: ${age} ${ending}`);
+            alert(`${userName}: ${age} ${ending}`);
     </script>
 </body>
 </html>
